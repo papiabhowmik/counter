@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #121212;
+  color: #f1f1f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Centered box */
+.counter-box {
+  background-color: #1e1e1e;
+  padding: 40px 50px;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.7);
+  text-align: center;
+  width: 320px;
+}
+
+/* Large count text */
+h1 {
+  font-size: 3rem;
+  margin-bottom: 30px;
+  color: #ffffff;
+  border-bottom: 2px solid #333;
+  padding-bottom: 10px;
+}
+
+/* Button container */
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Button style */
+button {
+  padding: 14px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  background-color: #333;
+  outline: none;
+}
+
+/* Individual button colors */
+#inc {
+  background-color: #4caf50;
+}
+
+#dec {
+  background-color: #e53935;
+}
+
+#reset {
+  background-color: #1976d2;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Advanced Counter</title>
+  <link rel="stylesheet" href="sunayana.css" />
+</head>
+<body>
+  <div class="counter-box">
+    <h1 id="cnt">Count : 0</h1>
+    <div class="button-group">
+      <button id="inc">Increment</button>
+      <button id="dec">Decrement</button>
+      <button id="reset">Reset</button>
+    </div>
+  </div>
+
+  <script>
+    let count = 0;
+    const display = document.getElementById("cnt");
+    const incBtn = document.getElementById("inc");
+    const decBtn = document.getElementById("dec");
+    const resetBtn = document.getElementById("reset");
+
+    incBtn.addEventListener("click", () => {
+      count++;
+      display.textContent = "Count : " + count;
+    });
+
+    decBtn.addEventListener("click", () => {
+      count--;
+      display.textContent = "Count : " + count;
+    });
+
+    resetBtn.addEventListener("click", () => {
+      count = 0;
+      display.textContent = "Count : " + count;
+    });
+  </script>
+</body>
+</html>

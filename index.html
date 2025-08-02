@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This is our website</title>
+</head>
+<body>
+    <h1 id="cnt">Count : 0</h1>
+    <button id="inc">Increment</button>
+    <button id="dec">Decrement</button>
+    <button id ="reset">Reset</button>
+    <ul id="list"></ul>
+    <script>
+        let count = 0;
+        let display = document.getElementById("cnt");
+        let incBtn = document.getElementById("inc");
+        let decBtn = document.getElementById("dec");
+        let resetBtn = document.getElementById("reset");
+        incBtn.addEventListener("click", function(){
+            count++;
+            display.textContent = "Count: "+ count;
+        })
+        decBtn.addEventListener("click", function(){
+            count--;
+            display.textContent = "Count: "+ count;
+        })
+        resetBtn.addEventListener("click", function(){
+            count = 0;
+            display.textContent = "Count: "+ count;
+        })
+
+    </script>
+</body>
+</html>
