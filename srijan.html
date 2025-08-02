@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counting Script </title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+     <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-image: url(https://www.pixelstalk.net/wp-content/uploads/2016/08/Glow-in-the-dark-wallpaper-hd.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    margin: 0;
+}
+
+.container{
+    /* background: #fff; */
+    width: 90%;
+    max-width: 600px;
+    height: 400px;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(176, 176, 176, 0.25);
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#count {
+    font-size: 70px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #f7e1b3;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 15px;
+    border: none;
+    border-radius: 18px;
+    cursor: pointer;
+    margin: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    color: white;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 40px;
+}
+
+button .text,
+button .icon {
+    position: absolute;
+    transition: opacity 0.3s ease-in-out;
+}
+
+
+button .icon {
+    font-size: 25px;
+    opacity: 0;
+}
+
+button:hover .text {
+    opacity: 0;
+}
+
+button:hover .icon {
+    opacity: 1;
+}
+
+button:hover {
+    transform: scale(1.12);
+}
+
+#inc {
+    background-color: #0972f3ee;
+}
+
+#dec {
+    background-color: #d3505d;
+}
+
+#reset {
+    background-color: #6c757d;
+}
+
+
+#inc:hover {
+    background-color: #024ef2;
+}
+
+#dec:hover {
+    background-color: #ff001a;
+}
+
+#reset:hover {
+    background-color: #3b3b3c;
+}
+     </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div id="count">Count: 0</div>
+    <div class="button-row">
+        <button id="inc">
+            <span class="text">Increment</span>
+            <span class="icon">+</span>
+        </button>
+
+        <button id="dec">
+            <span class="text">Decrement</span>
+            <span class="icon">-</span>
+        </button>
+    </div>
+    <button id="reset">
+        <span class="text">Reset</span>
+        <span class="icon">↻</span>
+    </button>
+    </div>
+    <script>
+        let count = 0;
+        const display = document.getElementById("count");
+        const inc = document.getElementById("inc");
+        const dec = document.getElementById("dec");
+        const reset = document.getElementById("reset");
+
+        display.textContent = "Count: " + count;
+
+        inc.addEventListener("click", function () {
+            count++;
+            display.textContent = "Count: " + count;
+        });
+
+        dec.addEventListener("click", function () {
+            count--;
+            display.textContent = "Count: " + count;
+        });
+
+        reset.addEventListener("click", function () {
+            count = 0;
+            display.textContent = "Count: " + count;
+        });
+    </script>
+</body>
+
+</html>

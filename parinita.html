@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Increment Decrement</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background:grey;
+    }
+
+    .counter-container {
+      background: blueviolet;
+      padding: 20px 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .count {
+      font-size: 48px;
+      margin: 20px 0;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .buttons button {
+      padding: 10px 20px;
+      font-size: 20px;
+      border: none;
+      background-color: #007bff;
+      color: white;
+      border-radius: 35px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .buttons button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="counter-container">
+    <h2>Counter</h2>
+    <div class="count" id="count">0</div>
+    <div class="buttons">
+        <button onclick="increment()">Increment</button>
+      <button onclick="decrement()">Decrement</button>  
+      <button onclick="Reset()">Reset</button>
+    </div>
+  </div>
+
+  <script>
+    let count = 0;
+
+    function updateDisplay() {
+      document.getElementById("count").textContent = count;
+    }
+
+    function increment() {
+      count++;
+      updateDisplay();
+    }
+
+    function decrement() {
+      count--;
+      updateDisplay();
+    }
+    function Reset(){
+     count=0;
+     updateDisplay();
+    }
+  </script>
+
+</body>
+</html>
