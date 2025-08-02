@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Count(+/-)</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <header>
+    <div class="logo">
+    <img src="SMARTWORK.png" alt="logo" >
+    </div>
+    <div class="title">____SMART COUNT____</div>
+    </header>
+    <div id="mn"> 
+   <h1 id="cnt" >0</h1>
+   <p>
+   <button id="inc"><b>INCREMENT(+)</b></button>
+   <button id="dec"><b>DECREMENT(-)</b></button>
+   <button id="reset"><b>RESET(.)</b></button>
+   </p>
+   </div>
+   <script>
+let Count=0;
+let display=document.getElementById("cnt");
+let incBtn=document.getElementById("inc");
+let decBtn=document.getElementById("dec");
+let resetBtn=document.getElementById("reset");
+incBtn.addEventListener("click", function(){
+    Count++;
+    display.textContent=""+Count;
+})
+decBtn.addEventListener("click", function(){
+    Count--;
+    display.textContent=""+Count;
+})
+resetBtn.addEventListener("click", function(){
+    Count=0;
+    display.textContent=""+Count;
+})
+   </script>
+</body>
+</html>
